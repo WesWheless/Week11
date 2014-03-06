@@ -18,7 +18,10 @@
     <div class="col-md-8">
       <h3>
         <a href="/products/<%= product.id %>/show"><%= product.name %></a>
-        <small class="text-muted">Category Goes Here</small>
+        <small class="text-muted">
+          <% category = Category.find_by(:id => product.category_id) %>
+          <%= category.name %>
+        </small>
       </h3>
 
       <p class="lead"><%= number_to_currency(product.price) %></p>

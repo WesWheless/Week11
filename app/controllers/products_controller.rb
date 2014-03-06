@@ -1,6 +1,7 @@
 class ProductsController < ApplicationController
 
   def index
+    logger.debug "Note to self: About to process the index action."
     if params[:cat].present?
       filter_category = Category.find_by(:name => params[:cat])
       @product_list = Item.all.where(:category_id => filter_category.id)
