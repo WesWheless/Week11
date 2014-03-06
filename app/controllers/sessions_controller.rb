@@ -1,5 +1,6 @@
 class SessionsController < ApplicationController
   def new
+    params[:id]
   end
 
   def destroy
@@ -12,7 +13,7 @@ class SessionsController < ApplicationController
     if user.present?
       if user.password == params[:pwd]
         session[:user_id] = user.id
-        redirect_to root_url, notice: "Wazzzup!"
+        redirect_to root_url, notice: "Wazzzup! #{user.name}"
       else
         redirect_to root_url, notice: "Wrong Password."
       end
