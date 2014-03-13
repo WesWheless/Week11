@@ -1,26 +1,26 @@
-  <div class="col-md-8">
+<div class="col-md-8">
 
-    <% if @reviews.any? %>
-      <% @reviews.each do |review| %>
-        <div class="row review">
-          <div class="col-md-12">
-            <p class="lead">
-              <% review.rating.times do %>
-                &starf;
-              <% end %>
-              <%= review.title %>
-            </p>
-            <% u = User.find_by(:id => review.user_id) %>
-            <% if u.present? %>
-              <p>by <%= u.first_name %></p>
+  <% if @reviews.any? %>
+    <% @reviews.each do |review| %>
+      <div class="row review">
+        <div class="col-md-12">
+          <p class="lead">
+            <% review.rating.times do %>
+              &starf;
             <% end %>
-            <p><%= review.body %></p>
-          </div>
+            <%= review.title %>
+          </p>
+          <% u = User.find_by(:id => review.user_id) %>
+          <% if u.present? %>
+            <p>by <%= u.first_name %></p>
+          <% end %>
+          <p><%= review.body %></p>
         </div>
+      </div>
 
-      <% end %>
-    <% else %>
-      <h3>Be the first to review this item!</h3>
     <% end %>
+  <% else %>
+    <h3>Be the first to review this item!</h3>
+  <% end %>
 
-  </div>
+</div>
