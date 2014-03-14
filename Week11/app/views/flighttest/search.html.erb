@@ -1,0 +1,28 @@
+
+
+ <H2>Showing flights from Chicago to XXX</H2>
+
+ <p>
+
+ It is currently XXX degress in Chicago, and XXX in <%= @arrival %>.
+ 
+ <table style="width:900px">
+<tr>
+  <th>Airline</th>
+  <th>Flight Number</th> 
+  <th>Departure Airport</th>
+  <th>Arrival Airport</th>
+  <th>Flight Time</th>
+</tr>
+# <% @flight_list.each do |flight| %>
+<% @flight_list.find_by arrival: 'BOS' do |flight| %>
+<tr>
+
+  <td><%= flight.airline %></td>
+  <td><%= flight.flight_num %></td>
+  <td><%= flight.departure %></td>
+  <td><%= flight.arrival %></td>
+  <td><%= flight.flight_time %></td>
+
+<p>
+<% end %>

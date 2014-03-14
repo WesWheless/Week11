@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Welcome to Flight Advisor!</title>
+	   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap-theme.min.css">
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+	<style>
+	body{ background: #FFFFFF no-repeat fixed center; }
+	H1{color:#780000;}
+	.Header{border-bottom:solid 1px black;}
+	</style>
+
+
+</head>
+<body>
+<center><img width=100px src=http://us.123rf.com/400wm/400/400/mercuriohm/mercuriohm1012/mercuriohm101200006/8360902-silhouette-of-a-aeroplane-on-a-black-background.jpg>
+
+<div class="Header"><H1>Welcome to Flight Advisor!</H1></div>
+
+<H2>Your personal travel resource taking the hassle out of flying.</H2>
+<H3>How you doing?</H3><br>
+
+<form action="/flight">
+	Departure Airport: <input type="text" name="Departure" value="ORD">
+	Arrival Airport: <select value="text" name="Arrival"><p><p>
+	  <option value="">First</option>
+	  <option value="Business">Business</option>
+	  <option value="Economy">Economy</option>
+
+</select>
+</form>
+
+<br>
+
+<form name="input" action="html_form_action.asp" method="get">
+	<input type="submit" value="Show flights!">
+</form>
+</center>
+</body>
+</html>

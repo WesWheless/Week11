@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  flight_id: 1
+  airline: MyString
+  flight_num: MyString
+  departure: MyString
+  arrival: MyString
+  flight_time: MyString
+
+two:
+  flight_id: 1
+  airline: MyString
+  flight_num: MyString
+  departure: MyString
+  arrival: MyString
+  flight_time: MyString
