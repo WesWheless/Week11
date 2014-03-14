@@ -8,6 +8,7 @@ class FlighttestController < ApplicationController
       @flight = Flighttest.where(:arrival => params[:arrival])
 
 
+
     end
 
     def home

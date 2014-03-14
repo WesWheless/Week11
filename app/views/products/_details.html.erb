@@ -6,6 +6,12 @@
     <h3><%= @product.name %></h3>
     <p><strong>Average Rating: <%= @reviews.average(:rating).to_f %> Stars</strong></p>
     <p class="lead"><%= number_to_currency(@product.price) %></p>
+<<<<<<< HEAD
     <p><%= @product.description %></p>
   </div>
 </div>
+=======
+    <p><%= truncate(@product.description, :length => 500) %></p>
+  </div>
+</div>
+>>>>>>> FETCH_HEAD

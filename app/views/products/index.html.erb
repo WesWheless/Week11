@@ -1,5 +1,10 @@
+<style>
+  #myicon { font-size: 120px; color: green;}
+</style>
+
 <div class="page-header">
-  <%= link_to "Add a New Product", "/products/new", :class => "btn btn-md btn-success pull-right" %>
+  <i id="myicon" class="fa fa-flag fa-lg"></i>
+  <%= link_to "Add a New Product", "/products/new", :class => "btn btn-md btn-success pull-right fa fa-flag" %>
   <h1>
     Product Catalog
     <small>Displaying <%= @product_list.count %> products.</small>
@@ -19,9 +24,14 @@
       <h3>
         <a href="/products/<%= product.id %>/show"><%= product.name %></a>
         <small class="text-muted">
+<<<<<<< HEAD
           <% category = Category.find_by(:id => product.category_id) %>
           <%= category.name %>
           </small>
+=======
+          <%= product.category.name %>
+        </small>
+>>>>>>> FETCH_HEAD
       </h3>
 
       <p class="lead"><%= number_to_currency(product.price) %></p>
