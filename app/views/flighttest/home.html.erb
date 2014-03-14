@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Welcome to Flight Advisor!</title>
+	   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap-theme.min.css">
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+	<style>
+	body{ background: #FFFFFF no-repeat fixed center; }
+	H1{color:#780000;}
+	.Header{border-bottom:solid 1px black;}
+	</style>
+
+
+</head>
+<body>
+<center><img width=100px src=http://us.123rf.com/400wm/400/400/mercuriohm/mercuriohm1012/mercuriohm101200006/8360902-silhouette-of-a-aeroplane-on-a-black-background.jpg>
+
+<div class="Header"><H1>Welcome to Flight Advisor!</H1></div>
+
+<H2>Your personal travel resource taking the hassle out of flying.</H2>
+<H3>Yikes!! It is currently <%= @data["main"]["temp"] %> degrees in Chicago.  Let's get away!</H3><br>
+
+<form action="/flighttest/index">
+	Departure Airport: <select value="ORD" name="departure"><option value="ORD">Chicago O'Hare</option></select>
+	Arrival Airport: <select value="text" name="arrival"><p><p>
+		<option value="CAK">Akron</option>
+		<option value="ALB">Albany</option>
+		<option value="ABQ">Albuquerque</option>
+		<option value="ABE">Allentown</option>
+		<option value="EHAM">Amsterdam</option>
+		<option value="ANC">Anchorage</option>
+		<option value="ATW">Appleton</option>
+		<option value="AVL">Asheville</option>
+		<option value="ASE">Aspen</option>
+		<option value="ATL">Atlanta</option>
+		<option value="AUS">Austin</option>
+		<option value="BWI">Baltimore</option>
+		<option value="PAH">Barkley</option>
+		<option value="ZBAA">Beijing</option>
+		<option value="EDDT">Berlin</option>
+		<option value="BHM">Birmingham</option>
+		<option value="BMI">Bloomington</option>
+		<option value="BOI">Boise</option>
+		<option value="BOS">Boston</option>
+		<option value="EBBR">Brussels</option>
+		<option value="BUF">Buffalo</option>
+		<option value="BTV">Burlington</option>
+		<option value="ELLX">Caledonia</option>
+		<option value="YYC">Calgary</option>
+		<option value="MMUN">Cancun</option>
+		<option value="CID">Cedar Rapids</option>
+		<option value="CWA">Central Wisconsin</option>
+		<option value="CMI">Champaign</option>
+		<option value="CHS">Charleston</option>
+		<option value="CHA">Chattanooga</option>
+		<option value="CRW">Charleston</option>
+		<option value="CLT">Charlotte</option>
+		<option value="CHO">Charlottesville</option>
+		<option value="EAU">Chippewa</option>
+		<option value="CVG">Cincinnati</option>
+		<option value="CLE">Cleveland</option>
+		<option value="COS">Colorado Springs</option>
+		<option value="CAE">Columbia, SC</option>
+		<option value="COU">Columbia, MO</option>
+		<option value="CMH">Columbus</option>
+		<option value="EKCH">Copenhagen</option>
+		<option value="DFW">Dallas</option>
+		<option value="DAY">Dayton</option>
+		<option value="DEC">Decatur</option>
+		<option value="VIDP">Delhi</option>
+		<option value="DEN">Denver</option>
+		<option value="DSM">Des Moines</option>
+		<option value="BRL">Southeast Iowa Regional</option>
+		<option value="DTW">Detroit</option>
+		<option value="OTBD">Doha</option>
+		<option value="EIDW">Dublin</option>
+		<option value="DBQ">Dubuque</option>
+		<option value="DLH">Duluth</option>
+		<option value="EDDL">Dusseldorf</option>
+		<option value="YEG">Edmonton</option>
+		<option value="ELP">El Paso</option>
+		<option value="ELM">Elmira</option>
+		<option value="EVV">Evansville</option>
+		<option value="FAR">Fargo</option>
+		<option value="XNA">Fayetteville</option>
+		<option value="FNT">Flint</option>
+		<option value="EDFH">Frankfurt-Hahn</option>
+		<option value="EDDF">Frankfurt</option>
+		<option value="MBS">Freeland</option>
+		<option value="FLL">Ft Lauderdale</option>
+		<option value="RSW">Ft Myers</option>
+		<option value="FWA">Ft Wayne</option>
+		<option value="GRR">Grand Rapids</option>
+		<option value="TVC">Grand Traverse City</option>
+		<option value="GRB">Green Bay</option>
+		<option value="GSP">Greenville</option>
+		<option value="MMGL">Guadalajara</option>
+		<option value="YHZ">Halifax</option>
+		<option value="MDT">Harrisburg</option>
+		<option value="BDL">Hartford</option>
+		<option value="VHHH">Hong Kong</option>
+		<option value="HNL">Honolulu</option>
+		<option value="CMX">Houghton Country</option>
+		<option value="IAH">Houston</option>
+		<option value="HSV">Huntsville</option>
+		<option value="IND">Indianapolis</option>
+		<option value="LTBA">Istanbul</option>
+		<option value="JAN">Jackson</option>
+		<option value="JAC">Jackson Hole</option>
+		<option value="JAX">Jacksonville</option>
+		<option value="AZO">Kalamazoo</option>
+		<option value="MCI">Kansas City</option>
+		<option value="TYS">Knoxville</option>
+		<option value="LSE">La Crosse</option>
+		<option value="LAN">Lansing</option>
+		<option value="LAS">Las Vegas</option>
+		<option value="LEX">Lexington</option>
+		<option value="LNK">Lincoln</option>
+		<option value="LIT">Little Rock</option>
+		<option value="EGLL">London</option>
+		<option value="YXU">London, Ontario</option>
+		<option value="LAX">Los Angeles</option>
+		<option value="MMSD">Los Cabos</option>
+		<option value="SDF">Louisville</option>
+		<option value="MSN">Madison</option>
+		<option value="MMMX">Malmo</option>
+		<option value="MHT">Manchester</option>
+		<option value="EGCC">Manchester, UK</option>
+		<option value="MHK">Manhattan</option>
+		<option value="KMEM">Memphis</option>
+		<option value="MEM">Memphis</option>
+		<option value="MIA">Miami</option>
+		<option value="MKE">Milwaukee</option>
+		<option value="MSP">Minneapolis</option>
+		<option value="MOB">Mobile</option>
+		<option value="MKJS">Montego Bay</option>
+		<option value="MMMY">Monterrey</option>
+		<option value="YUL">Montreal</option>
+		<option value="MTJ">Montrose</option>
+		<option value="EDDM">Munich</option>
+		<option value="MKG">Muskegon</option>
+		<option value="MYR">Myrtle Beach</option>
+		<option value="BNA">Nashville</option>
+		<option value="MYNN">Nassau</option>
+		<option value="MSY">New Orleans</option>
+		<option value="LGA">New York-LGA</option>
+		<option value="JFK">New York-JFK</option>
+		<option value="EWR">Newark</option>
+		<option value="ORF">Norfolk</option>
+		<option value="OKC">Oklahoma City</option>
+		<option value="OMA">Omaha</option>
+		<option value="SNA">Orange County</option>
+		<option value="MCO">Orlando</option>
+		<option value="YOW">Ottowa</option>
+		<option value="PSP">Palm Springs</option>
+		<option value="MPTO">Panama City</option>
+		<option value="LFPG">Paris</option>
+		<option value="PIA">Peoria</option>
+		<option value="PHL">Philadelphia</option>
+		<option value="PHX">Phoenix</option>
+		<option value="PIT">Pittsburgh</option>
+		<option value="PDX">Portland, OR</option>
+		<option value="PWM">Portland, ME</option>
+		<option value="PVD">Providence</option>
+		<option value="MMPR">Puerto Vallarta</option>
+		<option value="MLI">Quad Cities</option>
+		<option value="YQB">Quebec City</option>
+		<option value="RDU">Raleigh</option>
+		<option value="YQR">Regina</option>
+		<option value="RNO">Reno</option>
+		<option value="RIC">Richmond</option>
+		<option value="ROA">Roanoke</option>
+		<option value="RST">Rochester</option>
+		<option value="ROC">Rochester</option>
+		<option value="SMF">Sacramento</option>
+		<option value="SLC">Salt Lake City</option>
+		<option value="SAT">San Antonio</option>
+		<option value="SAN">San Diego</option>
+		<option value="SFO">San Francisco</option>
+		<option value="SJC">San Jose</option>
+		<option value="SJU">San Juan</option>
+		<option value="MSLP">San Salvador</option>
+		<option value="SBGR">Sao Paulo</option>
+		<option value="SRQ">Sarasota</option>
+		<option value="YXE">Saskatoon</option>
+		<option value="SAV">Savannah</option>
+		<option value="AVP">Scranton</option>
+		<option value="SEA">Seattle</option>
+		<option value="RKSI">Seoul</option>
+		<option value="ZSPD">Shanghai</option>
+		<option value="SUX">Sioux City</option>
+		<option value="FSD">Sioux Falls</option>
+		<option value="SBN">South Bend</option>
+		<option value="SGF">Springfield</option>
+		<option value="SPI">Springfield</option>
+		<option value="STL">St Louis</option>
+		<option value="HDN">Steamboat</option>
+		<option value="SYR">Syracuse</option>
+		<option value="TPA">Tampa</option>
+		<option value="YQT">Thunder Bay</option>
+		<option value="RJAA">Tokyo</option>
+		<option value="TOL">Toledo</option>
+		<option value="FOE">Topeka</option>
+		<option value="YYZ">Toronto</option>
+		<option value="TUL">Tulsa</option>
+		<option value="TUS">Tuscon</option>
+		<option value="UNV">University Park</option>
+		<option value="EGE">Vail</option>
+		<option value="YVR">Vancouver</option>
+		<option value="EPWA">Warsaw</option>
+		<option value="DCA">Washington Reagan</option>
+		<option value="IAD">Washington Dulles</option>
+		<option value="YKF">Waterloo, Ontario</option>
+		<option value="ALO">Waterloo, IA</option>
+		<option value="ART">Watertown</option>
+		<option value="PBI">West Palm Beach</option>
+		<option value="HPN">Westchester</option>
+		<option value="YWG">Winnipeg</option>
+		<option value="GSO">Winston-Salem</option>
+		<option value="ICT">Witchita</option>
+		<option value="BZN">Yellowstone</option>
+		<option value="LSZH">Zurich</option>
+
+</select>
+<p><p>
+
+	<input type="submit" value="Show flights!" class="input-md">
+</form>
+
+<br>
+<!-- 
+<form name="input" action="html_form_action.asp" method="get">
+
+</form> -->
+</center>
+</body>
+</html>
