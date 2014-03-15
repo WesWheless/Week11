@@ -6,9 +6,6 @@ class FlighttestController < ApplicationController
       @flight_list = Flighttest.all
       @arrival = params[:arrival]
       @flight = Flighttest.where(:arrival => params[:arrival])
-
-
-
     end
 
     def home

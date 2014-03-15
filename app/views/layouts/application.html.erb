@@ -36,20 +36,6 @@
       <%= link_to "Flight Advisor!", "/", :class => "navbar-brand" %>
     </div>
 
-    <!-- Collect the nav links, forms, and other content for toggling -->
-<!--     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li><a href="/products">Everything</a></li>
-        <% Category.all.order("name").each do |category| %>
-          <li>
-            <a href="/products?cat=<%= category.name %>">
-              <%= category.name %>
-            </a>
-          </li>
-        <% end %>
-      </ul>
- -->
-
       <ul class="nav navbar-nav navbar-right">
       <% user = User.find_by(:id => session[:user_id]) %>
       <% if user.present? %>
